@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add | Add users!</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body class="bg-dark-subtle">
+    <div class="container-xxl mt-5">
+        <nav class="navbar bg-dark">
+            <div class="container">
+              <a class="navbar-brand text-white" href="#">
+                CRUD Operations | Adding users
+              </a>
+            </div>
+          </nav>
+
+          <!-- CARD -->
+          <div class="card" style="width: 100%; border-radius: 0px;">
+            <div class="card-body">
+              <h5 class="card-title">Add credentials:</h5>
+
+
+
+              <div class="d-flex justify-content-center">
+                <form action="/add/add" method="POST">
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Insert name here</label>
+                            <input name="name" type="text" class="form-control">
+                          </div>
+                          <div class="mb-3">
+                            <label for="surname" class="form-label">Surname</label>
+                            <input name="surname" type="text" class="form-control">
+                          </div>
+                          <select name="skills" class="form-select form-select-lg mb-3">
+                            <option selected>Select skills</option>
+                            <option value="PHP">PHP</option>
+                            <option value="JS">JS</option>
+                          </select>
+                    <button name="add" style="border-radius: 0px; width: 100%;" type="submit" class="btn btn-success">Add</button>
+                </form>
+              </div>
+                                                      
+              </div>
+
+
+
+          </div>
+    </div>
+</body>
+</html>
