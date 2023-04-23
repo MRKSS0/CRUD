@@ -17,19 +17,14 @@ router.post('/add', (request, respond) => {
 
     var sql = 'INSERT INTO user (ID, user, surname, skills) VALUES (NULL, ?, ?, ?)';
 
-    try {
-        server.query(sql, [nameTaken, surnameTaken, optTaken], (err, res, field) => {
-            if(!err) {
-                console.log('Credentials added!\n ' + nameTaken + surnameTaken + optTaken);
-                respond.redirect('/');
-            } else {
-                console.log(err);
-            }
-        });
-    } catch(error) {
-        console.log('Something gone wrong ' + error);
-    }
-
+    server.query(sql, [nameTaken, surnameTaken, optTaken], (err, res, field) => {
+        try {
+            console.log('Credentials added!\n ' + nameTaken + surnameTaken + optTaken);
+            respond.redirect('/');
+        } catch(err) {
+            console.log('Something gone wrong' + err);
+        }
+    });
 });
 
 module.exports = router;

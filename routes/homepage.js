@@ -22,8 +22,6 @@ router.get('/', (request, respond) => {
     
 })
 
-
-
 router.post('/delete', (request, respond) => {
     deleteBtnTaken = request.body.delete;
 

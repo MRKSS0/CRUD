@@ -7,15 +7,16 @@ router.get('/', (request, respond) => {
     var idTaken = request.query.id;
     var sql = 'DELETE FROM user WHERE id = ?';
 
-    try {
-        server.query(sql, [idTaken], (err, res, fields) => {
+    server.query(sql, [idTaken], (err, res, fields) => {
+        try {
             console.log('User ID ' + idTaken + ' deleted.');
 
             respond.redirect('/')
-        });
-    } catch(error) {
-        console.log('Something gone wrong' + error);
-    }
+        } catch(err) {
+            console.log('Something gone wrong: ' + err);
+        }
+
+    });
 });
 
 module.exports = router;
