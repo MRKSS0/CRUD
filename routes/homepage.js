@@ -17,15 +17,7 @@ router.get('/', (request, respond) => {
         }
         respond.write('</tbody></table><div class="d-flex justify-content-center"><a href="add"><button style="border-radius:0;width:150px" type="button" class="btn btn-success">Add</button></a></div></div></div></div></body></html>');
         respond.end();
-
-    });
-    
-})
-
-router.post('/delete', (request, respond) => {
-    deleteBtnTaken = request.body.delete;
-
-    console.log('Button delete pressed!' + deleteBtnTaken);
+    });  
 });
 
 module.exports = router;
