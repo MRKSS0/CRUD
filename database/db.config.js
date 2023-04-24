@@ -9,11 +9,15 @@ const server = mysql.createConnection({
 });
 
 server.connect((err) => {
-    try {
-        console.log('Database connected!');
-    } catch(err) {
-        console.log('Something gone wrong' + err);
-    }  
+    if(!err) {
+        try {
+            console.log('Database connected!');
+        } catch(err) {
+            console.log('Something gone wrong' + err);
+        } 
+    } else {
+        console.log(err);
+    }
 });
 
 module.exports = server;

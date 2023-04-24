@@ -28,10 +28,4 @@ router.post('/delete', (request, respond) => {
     console.log('Button delete pressed!' + deleteBtnTaken);
 });
 
-router.post('/edit', (request, respond) => {
-    editBtnTaken = request.body.edit;
-
-    console.log('Button edit pressed!' + editBtnTaken);
-});
-
 module.exports = router;
