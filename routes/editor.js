@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const server = require('../database/db.config');
 const router = express.Router();
 
