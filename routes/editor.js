@@ -23,7 +23,7 @@ router.get('/', (request, respond) => {
     });
 });
 
-router.post('/edit', (request, respond) => {
+router.put('/edit', (request, respond) => {
     var sqlU = 'UPDATE user SET user = ?, surname = ?, skills = ? WHERE ID = ?';
     
     var idTaken = request.body.id;
